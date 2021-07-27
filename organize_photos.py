@@ -28,7 +28,7 @@ def extract_places(files, photos):
 
 def making_folders(files, place_names):
     for place in place_names:
-        os.mkdir(place, 0o666)
+        os.mkdir(place, 0o755)
     move_files(files, place_names)
 
 
@@ -36,7 +36,7 @@ def move_files(files, place_names):
     for photo in files:
         for place in place_names:
             if place in photo:
-                os.rename()
+                os.rename('Photos/'+photo, place + '/' + photo)
 
 
 getting_files()

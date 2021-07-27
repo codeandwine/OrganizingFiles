@@ -13,15 +13,16 @@ def getting_files():
 
 def extract_places(photos):
     place_names = []
-    temp = []
+
     for photo in photos:
+        temp = ''
         for i in photo:
             if (i.isalpha()):
-                temp.append(i)
+                temp += i
             if i == '.':
                 break
         if temp not in place_names:
-	        place_names.append(temp)
+            place_names.append(temp)
         temp = []
 
 

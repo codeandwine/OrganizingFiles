@@ -26,6 +26,9 @@ def extract_places(files, photos):
     making_folders(files, place_names)
 
 
-
+def making_folders(files, place_names):
+    for place in place_names:
+        os.mkdir(place, 0o666)
+    move_files(files, place_names)
 
 getting_files()

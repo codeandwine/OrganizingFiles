@@ -39,4 +39,9 @@ def move_files(files, place_names):
                 os.rename('Photos/'+photo, place + '/' + photo)
 
 
-getting_files()
+def organize_photos():
+    getting_files()
+
+
+if __name__ == '__main__':
+    organize_photos()

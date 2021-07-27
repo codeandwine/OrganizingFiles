@@ -8,10 +8,10 @@ def getting_files():
 
     for photo in files:
         photo_names.append(photo)
-    extract_places(photo_names)
+    extract_places(files, photo_names)
 
 
-def extract_places(photos):
+def extract_places(files, photos):
     place_names = []
 
     for photo in photos:
@@ -23,7 +23,9 @@ def extract_places(photos):
                 break
         if temp not in place_names:
             place_names.append(temp)
-        temp = []
+    making_folders(files, place_names)
+
+
 
 
 getting_files()
